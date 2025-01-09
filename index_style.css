@@ -10,12 +10,13 @@ body, a{
     text-align: center;
 }
 
-.exercise-box {
-    width: 20%;
-    padding: 20px;
-    margin: 20px;
-    border: 2px solid aliceblue;
-    /*background-color: #ffffff;*/
+body {
+    
+}
+
+main {
+    display: block;
+    width: 80%;
 }
 
 #section-left {
@@ -28,30 +29,38 @@ body, a{
     overflow: hidden
  }
 
-.exercise-box p {
-    margin: 0;
-    font-size: 16px;
+#verticalbar {
+    display: block;
+    width: 20%;
+    min-height: 100px;
+    float: right;
+    background-color: rgb(28, 32, 48);
+
+    /*overflow: hidden;
+    float: right;
+    background-color: rgb(28, 32, 48);*/
 }
 
-h1 {
-    color: red;
-    text-decoration: dotted;
+#navbar {
+    position: relative;
+    top: 600px;
+    background-color: rgb(28, 32, 48);
+    color: white;
+    padding-top: 1px;
+    padding-bottom: 30px;
+    /*text-align: center;*/
 }
 
-.heading1 {
-    color: red;
-    text-decoration: underline;
-}
-
-.heading3 {
-    color: green;
-    text-decoration: underline;
-}
-.bold {
+#navbar .logo {
+    font-size: 24px;
     font-weight: bold;
 }
 
-#title {
-    color: yellow;
-    text-decoration: underline;
+#navbar .nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid aliceblue;
+    padding: 6px;
 }
