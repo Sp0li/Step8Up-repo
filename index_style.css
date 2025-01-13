@@ -1,22 +1,26 @@
 
+:root {
+    --bg-color: rgb(33, 39, 63);
+    --secondary-color: rgb(28, 32, 48);
+    --inactive-text-color: white;
+    --active-text-color: orange;
+}
+
+
 
 * {
     font-family: 'Arial';
 }
 
-body, a{
-    background-color:rgb(33, 39, 63);
-    color:white;
+body{
+    background-color: var(--bg-color);
+    color: var(--inactive-text-color);
     text-align: center;
-}
-
-body {
-    
 }
 
 main {
     display: block;
-    width: 80%;
+    width: 80% auto;
 }
 
 #section-left {
@@ -31,10 +35,10 @@ main {
 
 #verticalbar {
     display: block;
-    width: 20%;
-    min-height: 100px;
+    width: 5%;
+    min-height: 910px;
     float: right;
-    background-color: rgb(28, 32, 48);
+    background-color: var(--secondary-color)
 
     /*overflow: hidden;
     float: right;
@@ -43,24 +47,39 @@ main {
 
 #navbar {
     position: relative;
-    top: 600px;
-    background-color: rgb(28, 32, 48);
-    color: white;
-    padding-top: 1px;
-    padding-bottom: 30px;
+    top: 740px;
+    background-color: var(--secondary-color);
+    color: var(--inactive-text-color);
+    padding: 30px;
     /*text-align: center;*/
 }
 
-#navbar .logo {
-    font-size: 24px;
+#navbar .nav-links a {
+    color: var(--inactive-text-color);
+    text-decoration: none;
+    margin: 0px;
+    font-size: 19px;
+    /*border: 1px solid aliceblue;*/
+    padding: 0px;
+}
+
+/*#navbar .nav-links span,mark{
+    color: var(--active-text-color);
+    font-size: large;
+    font-weight: bold;
+}*/
+
+.active{
+    color: var(--active-text-color);
+    font-size: large;
     font-weight: bold;
 }
 
-#navbar .nav-links a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 16px;
-    border: 1px solid aliceblue;
-    padding: 6px;
+.inactive{
+    color: var(--inactive-text-color);
+}
+
+#navbar .nav-links mark {
+    background: none;
+    padding-right: 10px;
 }

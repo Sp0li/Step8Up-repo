@@ -1,0 +1,77 @@
+/* Basic page styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #3a3a3a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    /* Add margin to the top and bottom of the heading */
+    margin: 0.5em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+.banner {
+    background-color: #00a2e8;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.banner h2 {
+    margin: 0;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product {
+    background-color: white;
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    /*border: 2px solid black;*/
+    /* Old styling */
+   
+    /* Add New styling here */
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px lightgray;
+}
+
+* {
+    font-weight: bold;
+}
