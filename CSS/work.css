@@ -58,20 +58,32 @@ img {
     padding: 20px;
 }
 
+
 .product {
     background-color: white;
     width: 200px;
     padding: 20px;
     margin: 20px;
     text-align: center;
-    /*border: 2px solid black;*/
+    border: 2px solid black;
     /* Old styling */
    
     /* Add New styling here */
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px lightgray;
+    rotate: 0;
+    transition: rotate 1.5s;
+
+    animation: pulse 7s infinite;
 }
 
-* {
-    font-weight: bold;
+@keyframes pulse {
+    0%, 100% {
+      scale: 1;
+    }
+    33% {
+      scale: 1.1;
+    }
+  }
+
+  .product:hover {
+    rotate: 360deg;
 }

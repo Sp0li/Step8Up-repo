@@ -27,27 +27,31 @@ main {
     float: left;
     margin-left: 25%;
     margin-right: 5%
- }
+}
  
- #section-right {
+#section-right {
     overflow: hidden
- }
+}
 
 #verticalbar {
+    position: fixed;
+    right: 10px;
+    height: 100%;
     display: block;
     width: 5%;
-    min-height: 910px;
-    float: right;
     background-color: var(--secondary-color)
-
-    /*overflow: hidden;
+    
+    /*old
     float: right;
-    background-color: rgb(28, 32, 48);*/
+    min-height: 910px;*/
 }
 
 #navbar {
-    position: relative;
-    top: 740px;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    bottom: 0;
+    right: 10px;
     background-color: var(--secondary-color);
     color: var(--inactive-text-color);
     padding: 30px;
@@ -63,12 +67,7 @@ main {
     padding: 0px;
 }
 
-/*#navbar .nav-links span,mark{
-    color: var(--active-text-color);
-    font-size: large;
-    font-weight: bold;
-}*/
-
+/*#navbar .nav-links*/
 .active{
     color: var(--active-text-color);
     font-size: large;

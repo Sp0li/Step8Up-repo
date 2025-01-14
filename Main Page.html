@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="end">
 
-<style>
-    body{
-    background-color:Black;
-    color:white;
-    }
-</style>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Sub Page</title>
     <link rel="stylesheet" href="MainPage_style.css">
+
 </head>
 
 <body>
-    test 2
-    <br>
-    <a href="index.html">Index</a>
 
-<form action="submit.php" method="post">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email">
-    <br>
-    <label for="phone number">phone number:</label>
-    <input type="phone number" name="phone number" id="phone number">
-    <br>
-    <input type="button" value="Submit">
-</form>
+    <section id="verticalbar">
+    
+    </section>
 
-<br>
-<img src="image.png" style="width:500px;height:600px;">
+    <main>
+    <title>Test Web page</title>
+    <br>
+
+    <h1>Web Site Title</h1>
+
+    
+    <form id="form" class="boxes" action="submit.php" method="post">
+        <Label>Text:</Label>
+        <input type="text" name="name" id="name" required>
+        <span></span>
+        <br>
+        <Label>Text2:</Label>
+        <input type="email" name="email" id="email" required>
+        <span></span>
+        <br>
+        <Label>Text3:</Label>
+        <input type="phone number" name="phone number" id="phone number" optional>
+        <br><br>
+        <input type="button" value="Submit">
+    </form>
+
+
+    <div id="navbar">
+        <div class="nav-links">
+            <span class="inactive"><</span>
+            <a href="index.html">link1</a>
+            <mark class="inactive">></mark>
+
+            <span class="active">></span>
+            <a href="Main Page.html">link2</a>
+            <mark class="active"><</mark>
+
+            <span class="inactive"><</span>
+            <a href="#">link3</a>
+            <mark class="inactive">></mark>
+        </div>
+    </div>
+
+</main>
 
 </body>
 

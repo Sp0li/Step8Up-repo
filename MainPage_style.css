@@ -1,57 +1,117 @@
 
+:root {
+    --bg-color: rgb(33, 39, 63);
+    --secondary-color: rgb(28, 32, 48);
+    --inactive-text-color: white;
+    --active-text-color: orange;
+}
+
+
 
 * {
     font-family: 'Arial';
 }
 
-body, a{
-    background-color:rgb(33, 39, 63);
-    color:white;
+body{
+    background-color: var(--bg-color);
+    color: var(--inactive-text-color);
     text-align: center;
 }
 
-.exercise-box {
-    width: 20%;
-    padding: 20px;
-    margin: 20px;
-    border: 2px solid aliceblue;
-    /*background-color: #ffffff;*/
+main {
+    display: block;
+    width: 80% auto;
 }
 
 #section-left {
     float: left;
     margin-left: 25%;
     margin-right: 5%
- }
+}
  
- #section-right {
+#section-right {
     overflow: hidden
- }
-
-.exercise-box p {
-    margin: 0;
-    font-size: 16px;
 }
 
-h1 {
-    color: red;
-    text-decoration: dotted;
+#verticalbar {
+    position: fixed;
+    right: 10px;
+    height: 100%;
+    display: block;
+    width: 5%;
+    background-color: var(--secondary-color)
+    
+    /*old
+    float: right;
+    min-height: 910px;*/
 }
 
-.heading1 {
-    color: red;
-    text-decoration: underline;
+#section {
+    position: relative;
+    width: 400px;
+    height: 150px;
+    border: 3px solid white;
+    text-align: left;
+    display: inline-block;
 }
 
-.heading3 {
-    color: green;
-    text-decoration: underline;
+#form {
+    position: relative;
+    width: 400px;
+    height: 150px;
+    /*border: 3px solid white;*/
+    padding-right: 200px;
+    text-align: right;
+    display: inline-block;
 }
-.bold {
+
+input + span {
+    position: relative;
+  }
+
+input:required:hover + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    top: -26px;
+    left: -70px;
+}
+
+#navbar {
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    bottom: 0;
+    right: 10px;
+    background-color: var(--secondary-color);
+    color: var(--inactive-text-color);
+    padding: 30px;
+}
+
+#navbar .nav-links a {
+    color: var(--inactive-text-color);
+    text-decoration: none;
+    margin: 0px;
+    font-size: 19px;
+    /*border: 1px solid aliceblue;*/
+    padding: 0px;
+}
+
+/*#navbar .nav-links*/
+.active{
+    color: var(--active-text-color);
+    font-size: large;
     font-weight: bold;
 }
 
-#title {
-    color: yellow;
-    text-decoration: underline;
+.inactive{
+    color: var(--inactive-text-color);
+}
+
+#navbar .nav-links mark {
+    background: none;
+    padding-right: 10px;
 }
