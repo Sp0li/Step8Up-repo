@@ -1,74 +1,69 @@
 <!DOCTYPE html>
-<html lang="end">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/work.css">
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Dashboard</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/work.css">
 </head>
 
 <body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="header">
+            <input type="text" placeholder="Search tasks..." class="search-bar">
+            <div class="user-avatar">
+                <img src="https://i.pravatar.cc/50?u=student" alt="User Avatar">
+            </div>
+        </header>
 
-    <div id="verticalbar">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Completed</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>Task List</h2>
+            <table class="task-table">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Task</th>
+                        <th>Date Created</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example rows -->
+                    <tr>
+                        <td>Incomplete</td>
+                        <td>Complete user dashboard</td>
+                        <td>2024-09-23</td>
+                        <td><button class="complete-btn">Mark as Complete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Incomplete</td>
+                        <td>Fix sidebar layout issues</td>
+                        <td>2024-09-22</td>
+                        <td><button class="complete-btn">Mark as Complete</button></td>
+                    </tr>
+                    <!-- Repeat for 10+ tasks -->
+                </tbody>
+            </table>
+        </main>
     </div>
-
-    <main>
-    <title>Test Web page</title>
-    <br>
-
-    <h1><br>Web Site Title</h1>
-
-    
-    <section class="flex-box">
-        <div class="flex-boxes">
-            <div>
-                What is Lorem Ipsum?
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </div>
-            <div>
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </div>
-            <div>
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </div>
-        </div>
-
-        <div class="flex-boxes">
-            <div>
-                text 4
-            </div>
-            <div>
-                text 5
-            </div>
-            <div>
-                text 6
-            </div>
-        </div>
-
-        <div class="flex-boxes">
-            <div>
-                text 7
-            </div>
-            <div>
-                text 8
-            </div>
-            <div>
-                text 9
-            </div>
-        </div>
-    </section>
-    
-
-    <div id="navbar">
-    </div>
-
-
-
-</main>
-
-
-
 </body>
 
 </html>

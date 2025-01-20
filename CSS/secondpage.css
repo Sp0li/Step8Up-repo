@@ -1,0 +1,119 @@
+
+:root {
+    --bg-color: rgb(33, 39, 63);
+    --secondary-color: rgb(28, 32, 48);
+    --inactive-text-color: white;
+    --active-text-color: orange;
+    --borderpx: 1px;
+}
+
+* {
+    font-family: 'Arial';
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--inactive-text-color);
+    text-align: center;
+}
+
+h1 {
+    width: 95%;
+    height: 110px;
+    background-color: var(--secondary-color)
+}
+
+.flex-box {
+    border: var(--borderpx) solid green;
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 600px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-boxes {
+    border: var(--borderpx) solid orange;
+    display: flex;
+    width: 20%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.flex-boxes div {
+    border: var(--borderpx) solid red;
+    padding: 10px;
+    border-radius: 5%;
+
+    /*width: 470px;
+    height: 170px;
+    padding: 15px;*/
+    text-align: center;
+}
+
+main {
+    display: block;
+    width: 80% auto;
+}
+
+#section-left {
+    float: left;
+    margin-left: 25%;
+    margin-right: 5%
+}
+ 
+#section-right {
+    overflow: hidden
+}
+
+#verticalbar {
+    position: fixed;
+    right: 10px;
+    height: 100%;
+    display: block;
+    width: 5%;
+    background-color: var(--secondary-color)
+    
+    /*old
+    float: right;
+    min-height: 910px;*/
+}
+
+#navbar {
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    bottom: 0;
+    right: 10px;
+    background-color: var(--secondary-color);
+    color: var(--inactive-text-color);
+    padding: 30px;
+    /*text-align: center;*/
+}
+
+#navbar .nav-links a {
+    color: var(--inactive-text-color);
+    text-decoration: none;
+    margin: 0px;
+    font-size: 19px;
+    /*border: 1px solid aliceblue;*/
+    padding: 0px;
+}
+
+/*#navbar .nav-links*/
+.active{
+    color: var(--active-text-color);
+    font-size: large;
+    font-weight: bold;
+}
+
+.inactive{
+    color: var(--inactive-text-color);
+}
+
+#navbar .nav-links mark {
+    background: none;
+    padding-right: 10px;
+}
