@@ -3,6 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <link
+    rel="stylesheet"
+    href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/index.css">
 
@@ -19,6 +29,18 @@
     <br>
 
     <h1>Web Site Title</h1>
+
+
+    <span id="changething">text</span>
+    <br>
+    <Select id="change">
+        <option value="0"></option>
+        <option value="1">option1</option>
+        <option value="2">option2</option>
+        <option value="3">option3</option>
+
+
+    </Select>
 
     <div id="navbar">
         <div class="nav-links">
@@ -38,7 +60,26 @@
 
 </main>
 
-
+<script>
+    $( function() {
+      var thing = $( "#changething" );
+   
+      $( "#change" ).selectmenu({
+        change: function( event, data ) {
+            thing.css({
+            width: data.item.value,
+            height: data.item.value
+          });
+        }
+       });
+   
+      /*$( "#color" ).selectmenu({
+         change: function( event, data ) {
+           circle.css( "background", data.item.value );
+         }
+       });*/
+    } );
+</script>
 
 </body>
 

@@ -7,7 +7,7 @@
 }
 
 * {
-    font-family: 'Arial';
+    font-family: 'Arvo';
 }
 
 body{
@@ -20,6 +20,13 @@ main {
     display: block;
     width: 80% auto;
 }
+
+select {
+    width: 150px;
+}
+
+
+
 
 #section-left {
     float: left;
@@ -63,6 +70,11 @@ main {
     font-size: 19px;
     /*border: 1px solid aliceblue;*/
     padding: 0px;
+    transition: font-size 0.5s;
+}
+
+#navbar .nav-links a:hover {
+    font-size: 26px;
 }
 
 /*#navbar .nav-links*/

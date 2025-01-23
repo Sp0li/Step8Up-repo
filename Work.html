@@ -4,66 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Task Dashboard</title>
-    <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="stylesheet" href="./CSS/work.css">
+    <title>jQuery CSS Manipulation</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
-    <div class="dashboard-container">
-        <!-- Header -->
-        <header class="header">
-            <input type="text" placeholder="Search tasks..." class="search-bar">
-            <div class="user-avatar">
-                <img src="https://i.pravatar.cc/50?u=student" alt="User Avatar">
-            </div>
-        </header>
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Tasks</a></li>
-                    <li><a href="#">Completed</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <h2>Change CSS Properties with jQuery</h2>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <h2>Task List</h2>
-            <table class="task-table">
-                <thead>
-                    <tr>
-                        <th>Status</th>
-                        <th>Task</th>
-                        <th>Date Created</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Example rows -->
-                    <tr>
-                        <td>Incomplete</td>
-                        <td>Complete user dashboard</td>
-                        <td>2024-09-23</td>
-                        <td><button class="complete-btn">Mark as Complete</button></td>
-                    </tr>
-                    <tr>
-                        <td>Incomplete</td>
-                        <td>Fix sidebar layout issues</td>
-                        <td>2024-09-22</td>
-                        <td><button class="complete-btn">Mark as Complete</button></td>
-                    </tr>
-                    <!-- Repeat for 10+ tasks -->
-                </tbody>
-            </table>
-        </main>
+    <div class="box" id="box1">
+        <p class="text-element">Text 1</p>
+        <button class="btn">Change Color</button>
     </div>
+
+    <div class="box" id="box2">
+        <p class="text-element">Text 2</p>
+        <button class="btn">Increase Font Size</button>
+    </div>
+
+    <div class="box" id="box3">
+        <p class="text-element">Text 3</p>
+        <button class="btn">Change Background</button>
+    </div>
+
+    <div class="box" id="box4">
+        <p class="text-element">Text 4</p>
+        <button class="btn">Italicize Text</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Change text color to red for the first box
+            $('#box1').click(function () {
+                $('#box1').css('color', 'red');
+            });
+
+            // TODO: Increase font size for the second box
+            $('#box2').click(function () {
+                $('#box2').css('font-size', '20px');
+            });
+
+            // TODO: Change background color for the third box
+            $('#box3').click(function () {
+                $('#box3').css('background-color', 'red');
+            });
+
+            // TODO: Italicize text for all the text elements
+            $('#box4').click(function () {
+                $('#box1').css('font-style', 'italic');
+                $('#box2').css('font-style', 'italic');
+                $('#box3').css('font-style', 'italic');
+                $('#box4').css('font-style', 'italic');
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>
