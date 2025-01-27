@@ -31,13 +31,6 @@
     <h1>Web Site Title</h1>
 
 
-    <span id="changething">text</span>
-    <br>
-    <Select id="change">
-        <option value="0"></option>
-        <option value="1">option1</option>
-        <option value="2">option2</option>
-        <option value="3">option3</option>
 
 
     </Select>
@@ -61,24 +54,9 @@
 </main>
 
 <script>
-    $( function() {
-      var thing = $( "#changething" );
-   
-      $( "#change" ).selectmenu({
-        change: function( event, data ) {
-            thing.css({
-            width: data.item.value,
-            height: data.item.value
-          });
-        }
-       });
-   
-      /*$( "#color" ).selectmenu({
-         change: function( event, data ) {
-           circle.css( "background", data.item.value );
-         }
-       });*/
-    } );
+
+console.log("test");
+
 </script>
 
 </body>

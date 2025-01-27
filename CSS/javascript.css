@@ -1,0 +1,33 @@
+
+:root {
+    --bg-color: rgb(33, 39, 63);
+    --secondary-color: rgb(28, 32, 48);
+    --inactive-text-color: white;
+    --active-text-color: orange;
+}
+
+* {
+    font-family: 'Arvo';
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--inactive-text-color);
+    text-align: center;
+}
+
+main {
+    display: block;
+    width: 80% auto;
+}
+
+#last-modified,#last-modified-button {
+    float: right;
+    margin-right: 3%;
+}
+
+#last-modified-button {
+    
+}
+
+
