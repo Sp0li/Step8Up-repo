@@ -4,65 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery CSS Manipulation</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/work.css">
 </head>
 
 <body>
 
-    <h2>Change CSS Properties with jQuery</h2>
-
-    <div class="box" id="box1">
-        <p class="text-element">Text 1</p>
-        <button class="btn">Change Color</button>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li>Overview</li>
+                <li>Analytics</li>
+                <li>Reports</li>
+                <li>Settings</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1 id="page-title">Dashboard Overview</h1>
+            <div class="widget">
+                <h2>Search for something</h2>
+                <input type="text" id="searchTerm" placeholder="Enter a search term" />
+                <button id="searchButton">Search</button>
+            </div>
+            <div class="widget">
+                <h2>Recent Searches</h2>
+                <ul id="searches">
+                </ul>
+            </div>
+            
+        </div>
     </div>
-
-    <div class="box" id="box2">
-        <p class="text-element">Text 2</p>
-        <button class="btn">Increase Font Size</button>
-    </div>
-
-    <div class="box" id="box3">
-        <p class="text-element">Text 3</p>
-        <button class="btn">Change Background</button>
-    </div>
-
-    <div class="box" id="box4">
-        <p class="text-element">Text 4</p>
-        <button class="btn">Italicize Text</button>
-    </div>
-
-    <script>
-        $(document).ready(function () {
-            // Change text color to red for the first box
-            $('#box1').click(function () {
-                $('#box1').css('color', 'red');
-            });
-
-            // TODO: Increase font size for the second box
-            $('#box2').click(function () {
-                $('#box2').css('font-size', '20px');
-            });
-
-            // TODO: Change background color for the third box
-            $('#box3').click(function () {
-                $('#box3').css('background-color', 'red');
-            });
-
-            // TODO: Italicize text for all the text elements
-            $('#box4').click(function () {
-                $('#box1').css('font-style', 'italic');
-                $('#box2').css('font-style', 'italic');
-                $('#box3').css('font-style', 'italic');
-                $('#box4').css('font-style', 'italic');
-            });
-
-        });
-    </script>
 
 </body>
+<script src="scripts/work.js"></script>
 
 </html>

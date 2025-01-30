@@ -21,10 +21,18 @@ main {
     width: 80% auto;
 }
 
+.icon {
+    width: 3%;
+    /*43px*/
+    float: left;
+}
+
+#icons {
+    display: block;
+}
+
 #last-modified,#last-modified-button {
     float: right;
     margin-right: 3%;
 }
-
-
 

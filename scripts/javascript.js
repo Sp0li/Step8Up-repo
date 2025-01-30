@@ -115,6 +115,25 @@ function refreshlm() {
 
 setInterval(refreshlm,1000);
 
+var mode = "dark";
+
+document.getElementById("icon").addEventListener("click",function(e){
+    if(mode=="dark")
+    {
+        document.documentElement.style.setProperty('--bg-color', 'white');
+        document.documentElement.style.setProperty('--secondary-color', 'white');
+        document.getElementById("icon").src = "images/moon-icon.png";
+        mode = "light";
+    }
+    else
+    {
+        document.documentElement.style.setProperty('--bg-color', 'rgb(33, 39, 63)');
+        document.documentElement.style.setProperty('--secondary-color', 'rgb(28, 32, 48)');
+        document.getElementById("icon").src = "images/sun-icon.png";
+        mode = "dark";
+    }
+});
+
 //document.getElementById("elementId").addEventListener("focus",function(e){
     //Do Something here
   // });
