@@ -36,6 +36,8 @@ function reFresh() {
 function refreshlm() {
     if(refresh)
     {
+        //console.clear();
+        
         // lm - last modified
         // c - current
         // d - date
@@ -51,6 +53,8 @@ function refreshlm() {
         var date = new Date();
         var cd = [date.getDate(), date.getMonth()+1, date.getFullYear()]
         var ct = [date.getSeconds(), date.getMinutes(), date.getHours()]
+        
+        console.log();
 
         var tsm = [ct[0]-lmt[0], ct[1]-lmt[1], ct[2]-lmt[2]];
         var dsm = [cd[0]-lmd[0], cd[1]-lmd[1], cd[2]-lmd[2]];
@@ -59,11 +63,25 @@ function refreshlm() {
         {tsm[1]-=1;
             tsm[0]+=60;}
         if(Math.abs(tsm[1])!=tsm[1])
-        {tsm[0]-=1;
+        {tsm[2]-=1;
             tsm[1]+=60;}
         if(Math.abs(tsm[2])!=tsm[2])
-        {tsm[2]-=1;
-            tsm[1]+=24;}
+        {dsm[0]-=1;
+            tsm[2]+=24;}
+        let daysinmonths = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+        if(Math.abs(dsm[0])!=dsm[0])
+            {dsm[1]-=1;
+                let oneless = date.getMonth()-1;
+                if(oneless==-1)
+                {oneless=12;}
+                dsm[0]+=daysinmonths[oneless];}
+        if(Math.abs(dsm[1])!=dsm[1])
+        {dsm[2]-=1;
+            dsm[1]+=12;}
+
+        //console.log(tsm);
+        //console.log(dsm);
 
         var dtslm;
         if(dsm[2]!=0)
@@ -85,7 +103,7 @@ function refreshlm() {
             if(dsm[0]==1)
                 dtslm = "1 Day ago";
             else
-                dtslm = `${dsm[1]} Days ago`;
+                dtslm = `${dsm[0]} Days ago`;
         }
         else if(tsm[2]!=0)
         {
