@@ -1,41 +1,41 @@
-from InquirerPy import prompt
+from InquirerPy import prompt,inquirer
 from rich.console import Console
 from rich.table import Table
 from rich.progress import Progress
-import time
+import os.path
 
 console = Console()
 
-# Get user input with Inquirer
-questions = [
-    {"type": "input", "name": "name", "message": "What is your name?"},
-    {"type": "input", "name": "color", "message": "What is your favorite color?"},
-]
-answers = prompt(questions)
+#'''
+#p = inquirer.text(message=": ").execute()
 
-# Display a formatted message with Rich
-console.print(
-    f"Hello, [bold {answers['color']}] {answers['name']}![/bold {answers['color']}]",
-    style=answers["color"],
-)
+'''
+ptitle = inquirer.text(message="Project Title: ").execute()
+pdesc = inquirer.text(message="Project Description: ",multiline=True).execute()
+pinstallop = inquirer.text(message="Installation Instructions: ").execute()
+usageinstr = inquirer.text(message="Usage Instructions: ").execute()
+licenseselec = inquirer.text(message="Choose a license: ",
+        completer={
+            "MIT License": None,
+            "Apache License 2.0": None,
+            "GNU General Public License (GPL v3)": None,
+            "GNU Lesser General Public License (LGPL v3)": None,
+            "Mozilla Public License 2.0 (MPL 2.0)": None,
+            "Creative Commons Licenses (CC0, CC BY, etc.)": None,
+            "Unlicense": None,
+        },).execute()
+contactinfo = inquirer.text(message="Leave a way to contact you: ").execute()
+'''
 
-# Create a table using Rich
-table = Table(title="Sample Data")
-table.add_column("ID", justify="right", style="cyan")
-table.add_column("Name", style="magenta")
-table.add_column("Score", justify="right", style="green")
+save_path = 'C:/Users/Oli G/bootcamp/Step8/side projects/python'
 
-table.add_row("1", "Alice", "85")
-table.add_row("2", "Bob", "92")
-table.add_row("3", "Charlie", "78")
+name_of_file = "test"
 
-console.print(table)
+completeName = os.path.join(save_path, name_of_file+".md")         
 
-# Show a progress bar
-with Progress() as progress:
-    task = progress.add_task("Processing...", total=100)
-    for _ in range(10):
-        time.sleep(0.3)
-        progress.update(task, advance=10)
+f = open(completeName, "w")
 
-console.print("[bold green]Task Complete![/bold green] ✅")
+message = ""#f"{ptitle}\n{pdesc}\n{pinstallop}\n{usageinstr}\n{licenseselec}\n{contactinfo}"
+f.write(message)
+f.close()
+
