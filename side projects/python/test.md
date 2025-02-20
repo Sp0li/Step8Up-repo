@@ -7,6 +7,7 @@ more text
 2. of things
 
 code:
+
         code here
         and here
             also here
