@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import './Form.css';
 import { useEffect } from 'react';
+import { useForm } from "react-hook-form"
 
 function Form() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,13 +38,32 @@ function Form() {
     setOtherValue(value);
   };
 
-  const handleSubmit = (e) => {
+  /*const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Form submitted:\nName: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`);
-  };
+  };*/
+
+  const onSubmit = (data) => console.log(data)
 
   return (
-    <div className="form-container">
+    <form onSubmit={handleSubmit(onSubmit)}>
+    {/* register your input into the hook by invoking the "register" function */}
+    <input defaultValue="test" {...register("example")} />
+
+    {/* include validation with required or other standard HTML validation rules */}
+    <input {...register("exampleRequired", { required: true })} />
+    {/* errors will return when field validation fails  */}
+    {errors.exampleRequired && <span>This field is required</span>}
+
+    <input type="submit" />
+  </form>
+  );
+}
+
+export default Form;
+
+
+/*    <div className="form-container">
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -78,10 +105,8 @@ function Form() {
             </label>
           </div>
         </div>
+
         <button type="submit" className="submit-button">Submit</button>
       </form>
-    </div>
-  );
-}
+    </div>*/
 
-export default Form;

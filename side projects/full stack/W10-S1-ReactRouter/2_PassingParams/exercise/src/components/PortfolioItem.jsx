@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 function PortfolioItem() {
   
   const { id } = useParams();
-
+  
   return (
     <div>
       <h1>Portfolio Item {id}</h1>
