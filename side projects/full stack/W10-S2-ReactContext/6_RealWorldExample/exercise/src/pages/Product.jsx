@@ -5,7 +5,8 @@ import { useBasket } from '../contexts/BasketContext';
 import { products } from '../data';
 
 function Product() {
-    // TODO: what does this function do?
+// TODO: what does this function do? v
+// finds and displays a specific product
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
   const { addToBasket } = useBasket();

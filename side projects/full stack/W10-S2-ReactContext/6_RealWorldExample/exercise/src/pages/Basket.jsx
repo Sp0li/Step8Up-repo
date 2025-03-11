@@ -2,7 +2,7 @@ import React from 'react';
 import { useBasket } from '../contexts/BasketContext';
 
 function Basket() {
-  const { basket, updateQuantity, calculateTotal } = useBasket();
+  const { basket, updateQuantity, calculateTotal, removeFromBasket } = useBasket();
 
   return (
     <div>
@@ -23,6 +23,7 @@ function Basket() {
                   onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
                 />
               </label>
+              <button onClick={() => removeFromBasket(item)}>Remove from Basket</button>
             </div>
           ))}
           <h2 className="basket-total">Total: £{calculateTotal()}</h2>
